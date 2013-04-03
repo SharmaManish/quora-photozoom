@@ -1,0 +1,36 @@
+{
+
+   "manifest_version": 2,
+   
+   "name": "Quora PhotoZoom",
+   
+   "version" : "1.0",
+   
+   "background": {
+      "scripts": [ "js/rg3.util.js", "js/rg3.storage.js", "js/quoraphotozoom.background.js" ]
+   },
+   
+   "content_scripts": [ 
+   
+   {
+      
+	  "js": [ "js/rg3.util.js", "js/rg3.quoraphotozoom.js"],
+      "matches": [ "*://*.quora.com/*" ],
+      "run_at": "document_end"
+	  
+   }
+   
+   ],
+   
+   "description": "Now Zoom your photos on quora",
+   
+   "icons": {
+   
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+	  
+   },
+
+   "permissions": [ "tabs", "*://*.quora.com/*"]
+}
